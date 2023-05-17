@@ -54,8 +54,8 @@ export interface AnalyzerResult {
 
 export async function analyze(cwd?: string): Promise<AnalyzerResult> {
   const execOutput = await exec.getExecOutput(
-    'dart',
-    ['analyze', '--format=json', '.'],
+    'fvm',
+    ['dart', 'analyze', '--format=json', '.'],
     {
       cwd,
       silent: true,
