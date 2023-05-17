@@ -52,7 +52,7 @@ var AnalyzerProblemSeverity;
 })(AnalyzerProblemSeverity = exports.AnalyzerProblemSeverity || (exports.AnalyzerProblemSeverity = {}));
 function analyze(cwd) {
     return __awaiter(this, void 0, void 0, function* () {
-        const execOutput = yield exec.getExecOutput('dart', ['analyze', '--format=json', '.'], {
+        const execOutput = yield exec.getExecOutput('fvm', ['dart', 'analyze', '--format=json', '.'], {
             cwd,
             silent: true,
             ignoreReturnCode: true,
